@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDC</title>
+</head>
+<body>
+  <script>
+    var A = parseInt(prompt("Informe um numero: "));
+    var B = parseInt(prompt("Informe o segundo numero: "));
+    var menorNum, maiorNum;
+    var aux=0
+    if(A>B){
+        maiorNum=A;
+        menorNum=B;
+    }else{
+        maiorNum=B;
+        menorNum=A;
+    }
+    while((maiorNum%menorNum)!=0){
+        aux=menorNum;
+        menorNum=(maiorNum%menorNum);
+        maiorNum=aux;
+    }
+    document.write("MDC de ("+ A + " , "+ B + ") = " + menorNum);
+    
+  </script>
+</body>
+</html>

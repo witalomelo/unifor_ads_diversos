@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem</title>
+</head>
+<body>
+  <script>
+    function contarInteiros(N, conjuntoDeDados) {
+  let contador = 0;
+
+  for (let i = 0; i < conjuntoDeDados.length; i++) {
+    const valorAtual = conjuntoDeDados[i];
+
+    if (Number.isInteger(valorAtual) && valorAtual >= conjuntoDeDados[0] && valorAtual <= N) {
+      contador++;
+    }
+  }
+  return contador;
+}
+
+const conjuntoDeDados = [3, 7, 2, 8, 9.5, 1, 5];
+const primeiroDado = conjuntoDeDados[0];
+const N = 8;
+const quantidadeInteiros = contarInteiros(N, conjuntoDeDados);
+
+document.write(`Existem ${quantidadeInteiros} valores inteiros entre ${primeiroDado} e ${N} no conjunto de dados ${conjuntoDeDados}`);
+
+  </script>
+</body>
+</html>
