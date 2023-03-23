@@ -2,21 +2,21 @@ import java.util.Scanner;
 
 public class MDC {
     public static void main(String[] args) {
-        try(Scanner input = new Scanner(System.in)) {
-			int n1=0;
-			System.out.print("Digite n1:  ");
-			n1 = input.nextInt();
-			int n2=0;
-			System.out.print("Digite n2: ");
-			n2 = input.nextInt();
+		try(Scanner n = new Scanner(System.in)) {
+			int num1=0;
+			System.out.print("Digite o primeiro numero: ");
+			num1 = n.nextInt();
+			int num2=0;
+			System.out.print("Digite o segundo numero: ");
+			num2 = n.nextInt();
 			
 			int maior, menor;
-			if(n1>n2) {
-				maior= n1;
-				menor= n2;
+			if(num1>num2) {
+				maior= num1;
+				menor= num2;
 			} else {
-				maior= n2;
-				menor= n1;
+				maior= num2;
+				menor= num1;
 			}
 			int aux = 0;
 			while((maior%menor)!=0) {
@@ -24,7 +24,7 @@ public class MDC {
 				menor= (maior%menor);
 				aux= maior;
 			}
-			System.out.print("MDC de ("+ n1 + " , " + n2 + ") = " +
+			System.out.print("MDC de ("+ num1 + " , " + num2 + ") = " +
 				    menor);
 		}
   }

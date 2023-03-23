@@ -12,7 +12,8 @@ public class Contagem {
     
         System.out.print("digite o n2: ");
         n = input.nextInt();
-        input.close();
+
+        input.close(); //fechar input
 
 
         int cont = 0;
